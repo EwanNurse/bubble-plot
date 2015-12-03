@@ -7,6 +7,10 @@ text {
   stroke: #000;
 }
 
+.cross {
+  stroke: #000;
+}
+
 .axis path, .axis line {
   fill: none;
   stroke: #000;
