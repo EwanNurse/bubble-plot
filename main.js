@@ -88,6 +88,7 @@ d3.json("nations.json", function(nation){
                             .attr("class", "data_canvas");
 
             // Calculate the averages for each region.
+<<<<<<< HEAD
     
     
     
@@ -101,6 +102,20 @@ d3.json("nations.json", function(nation){
 
     var filtered_reg_nations = region_data.map(function(region) { return region;});
     
+=======
+    
+
+    var region_data = [];
+    for (var i in region_names) {
+        var filtered_nations_by_regions = nation.filter(function(nation){
+            return (nation.region == region_names[i]); 
+    });
+        region_data[i] = calc_mean(filtered_nations_by_regions);
+    }
+
+    var filtered_reg_nations = region_data.map(function(region) { return region;});
+    
+>>>>>>> origin/gh-pages
     function calc_mean(region_data) {
     var mean_income = [];
     var mean_lifeExpectancy = [];
@@ -181,6 +196,9 @@ d3.json("nations.json", function(nation){
     year_idx = parseInt(this.value) - 1950;
     update();
     });
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/gh-pages
 });
 
